@@ -1,0 +1,12 @@
+.navbar
+{
+  background-color: rgba(51, 181, 229, 1) !important;
+}
+
+.navbar li a {
+  color: white !important;
+}
+
+.navbar li a:hover {
+  color: black !important
+}

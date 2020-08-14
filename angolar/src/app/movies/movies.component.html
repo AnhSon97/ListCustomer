@@ -1,0 +1,77 @@
+<div class="viewlist" style="margin-top:80px">
+  <h2 style="text-align: center;">List Customer</h2>
+  <div class="container">
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>FullName</th>
+              <th>Gender</th>
+              <th>Address</th>
+              <th>Department</th>
+              <th>Salary</th>
+              <th>Position</th>
+              <th>Edit</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            <tr *ngFor="let i of listcustomer">
+              <td>{{i.id}}</td>
+              <td>{{i.FullName}}</td>
+              <td>{{i.Gender}}</td>
+              <td>{{i.Address}}</td>
+              <td>{{i.Department}}</td>
+              <td>{{i.Salary}}</td>
+              <td>{{i.Position}}</td>
+              <td><button type="button" (click)="delete(i.id)" class="btn btn-danger">Delete</button></td>
+              <td><a routerLink="/ditails/{{i.id}}"><button type="button" class="btn btn-info">Info</button></a></td>
+              <td></td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+  <h2 style="text-align: center;">Add Customer</h2>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="fullName">New's FullName:</label>
+        <input type="fullName" #FullName class="form-control" placeholder="Enter fullName" name="fullName">
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="gender" #Gender class="form-control" placeholder="Enter gender" name="gender">
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="address" #Address class="form-control" placeholder="Enter address" name="address">
+      </div>
+      <div class="form-group">
+        <label for="department">Department:</label>
+        <input type="department" #Department class="form-control" placeholder="Enter department" name="department">
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="salary" #Salary class="form-control" placeholder="Enter salary" name="salary">
+      </div>
+      <div class="form-group">
+        <label for="position">Position:</label>
+        <input type="position" #Position class="form-control" placeholder="Enter gender" name="position">
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+        (click)="add(FullName.value,Gender.value,Address.value,Department.value,Salary.value,Position.value);
+      FullName.value = '';Gender.value='';Address.value ='';Department.value='';Salary.value='';Position.value=''">ADD</button>
+    </form>
+  </div>
+</div>

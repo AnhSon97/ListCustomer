@@ -1,0 +1,51 @@
+<!-- <div style="margin-top: 80px;">
+  <h3 style="text-align: center;">Top4-Customer!</h3>
+  <div class="row">
+    <a *ngFor="let i of listCustomer" style="text-decoration: none;" routerLink="/ditails/{{i.id}}">
+      <div class="col">
+        <h4>{{i.FullName}}</h4>
+      </div>
+    </a>
+  </div>
+</div> -->
+
+<!-- Grid row -->
+<div class="container" style="margin-top: 80px;">
+  <div class="row">
+    <!-- Grid column -->
+    <div class="col-lg-10 col-xl-8">
+
+      <div class="media d-block d-md-flex">
+        <img class="d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto" src="https://mdbootstrap.com/img/Others/documentation/img (20)-mini.jpg"
+          alt="Avatar">
+        <div class="media-body text-center text-md-left ml-md-3 ml-0">
+          <a style="text-decoration: none;" routerLink="/ditails/{{listCustomer[1].id}}"><h5 class="mt-0 font-weight-bold blue-text">{{listCustomer[1].FullName}}</h5></a>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+          vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+          congue felis in faucibus.
+
+          <div class="media d-block d-md-flex mt-3 shadow-textarea">
+            <img class="d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto" src="https://mdbootstrap.com/img/Others/documentation/img (3)-mini.jpg"
+              alt="Generic placeholder image">
+            <div class="media-body text-center text-md-left ml-md-3 ml-0">
+              <a style="text-decoration: none;" routerLink="/ditails/{{listCustomer[2].id}}"><h5 class="mt-0 font-weight-bold blue-text">{{listCustomer[2].FullName}}</h5></a>
+              <div class="form-group basic-textarea rounded-corners mb-md-0 mb-4">
+                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea3" rows="3" placeholder="Write your comment..."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="media d-block d-md-flex">
+        <img class="d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto" src="https://mdbootstrap.com/img/Others/documentation/img (2)-mini.jpg"
+          alt="Avatar">
+        <div class="media-body text-center text-md-left ml-md-3 ml-0">
+          <a style="text-decoration: none;" routerLink="/ditails/{{listCustomer[3].id}}"><h5 class="mt-0 font-weight-bold blue-text">{{listCustomer[3].FullName}}</h5></a>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis odit minima eaque dignissimos recusandae officiis commodi
+          nulla est, tempore atque voluptas non quod maxime, iusto, debitis aliquid? Iure ipsum, itaque.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

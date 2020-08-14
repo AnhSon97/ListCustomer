@@ -1,0 +1,50 @@
+<div *ngIf="customer" class="edit" style="margin-top:80px">
+  <!-- If selectedMovies exist show div class edit -->
+  <h3 style="text-align: center; color: chocolate;"> You selected customer: {{customer.FullName}} </h3>
+  <div class="row">
+    <div class="col-sm-5">
+      <table style="width: 100%;">
+        <tr>
+          <td>FullName:</td>
+          <td><input [(ngModel)]="customer.FullName" placeholder="EnterFullName"></td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td><input [(ngModel)]="customer.Gender" placeholder="EnterGender"></td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td><input [(ngModel)]="customer.Address" placeholder="EnterAddress"></td>
+        </tr>
+        <tr>
+          <td>Department:</td>
+          <td><input [(ngModel)]="customer.Department" placeholder="EnterDepartment"></td>
+        </tr>
+        <tr>
+          <td>Salary:</td>
+          <td><input [(ngModel)]="customer.Salary" placeholder="EnterSalary"></td>
+        </tr>
+        <tr>
+          <td>Position:</td>
+          <td><input [(ngModel)]="customer.Position" placeholder="Position"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm-7">
+      <table>
+        <h1 style="color: aliceblue; text-align: center;">Information</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat error quaerat expedita quis eum explicabo
+          ab,
+          sunt qui totam fugit officiis libero, consectetur accusantium aspernatur repellendus, doloribus dolor natus
+          odit.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem officiis quidem eveniet molestiae sapiente
+          maiores porro ex saepe, laboriosam perferendis iusto asperiores est eius ea assumenda impedit quo. Dicta,
+          aspernatur!</p>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-1"><button type="button" class="btn btn-primary" (click)="save()">Save</button></div>
+    <div class="col-sm-1"><button type="button" class="btn btn-success" (click)="goback()"> back </button></div>
+  </div>
+</div>

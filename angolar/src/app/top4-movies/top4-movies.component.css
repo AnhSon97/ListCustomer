@@ -1,0 +1,31 @@
+.col-1-4{
+  width: 20%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.col{
+  background-color: teal;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 120px;
+  max-height: 120px;
+  min-width: 120px;
+  min-height: 120px;
+  padding-top: 10x;
+  margin: 10px;
+}
+
+
+.movie-box:hover{
+  background-color: aqua;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+*,*:after,*:before{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
