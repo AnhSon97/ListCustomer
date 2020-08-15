@@ -1,0 +1,33 @@
+<h2 style="text-align: center;">Add Customer</h2>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="fullName">New's FullName:</label>
+      <input type="fullName" #FullName class="form-control" placeholder="Enter fullName" name="fullName">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <input type="gender" #Gender class="form-control" placeholder="Enter gender" name="gender">
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="address" #Address class="form-control" placeholder="Enter address" name="address">
+    </div>
+    <div class="form-group">
+      <label for="department">Department:</label>
+      <input type="department" #Department class="form-control" placeholder="Enter department" name="department">
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary:</label>
+      <input type="salary" #Salary class="form-control" placeholder="Enter salary" name="salary">
+    </div>
+    <div class="form-group">
+      <label for="position">Position:</label>
+      <input type="position" #Position class="form-control" placeholder="Enter gender" name="position">
+    </div>
+
+    <button type="submit" class="btn btn-primary"
+      (click)="add(FullName.value,Gender.value,Address.value,Department.value,Salary.value,Position.value);
+    FullName.value = '';Gender.value='';Address.value ='';Department.value='';Salary.value='';Position.value=''">ADD</button>
+  </form>
+</div>

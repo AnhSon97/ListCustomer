@@ -10,24 +10,12 @@ import { from } from 'rxjs';
 })
 export class MoviesComponent implements OnInit {
 
-  listcustomer: Customer[];
+  public listcustomer: Customer[];
 
   constructor(private movieServiceService: MovieServiceService) { }
 
   ngOnInit(): void {
     this.movieServiceService.getData().subscribe(parameter => this.listcustomer = parameter);
-  }
-
-  add(FullName: string, Gender: string, Address: string, Department: string, Salary: string, Position: string): void {
-    const newCustomer: Customer = new Customer();
-    newCustomer.FullName = FullName;
-    newCustomer.Gender = Gender;
-    newCustomer.Address = Address;
-    newCustomer.Department = Department;
-    newCustomer.Salary = Salary;
-    newCustomer.Position = Position;
-
-    this.movieServiceService.addData(newCustomer).subscribe(insertedCustomer => this.listcustomer.push(insertedCustomer))
   }
 
   delete(id: number) {

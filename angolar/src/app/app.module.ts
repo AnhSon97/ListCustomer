@@ -8,9 +8,10 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieServiceService } from '../app/movie-service.service';
 import { Top4MoviesComponent } from './top4-movies/top4-movies.component';
 import { HttpClientModule } from '@angular/common/http';
-import { from } from 'rxjs';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MovieDetailsComponent,
     Top4MoviesComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddCustomerComponent
   ],
   imports: [
     FormsModule,
@@ -29,6 +31,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   providers: [
     MovieServiceService,
+    MoviesComponent,
+    AddCustomerComponent
   ],
   bootstrap: [AppComponent]
 })
