@@ -23,5 +23,4 @@ export class MoviesComponent implements OnInit {
       _ => this.listcustomer = this.listcustomer.filter(i => i.id !== id)
     )
   }
-
 }

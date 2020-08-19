@@ -10,6 +10,7 @@ import { MovieServiceService } from '../movie-service.service';
   templateUrl: './movie-details.component.html',
   styleUrls: ['./movie-details.component.css']
 })
+
 export class MovieDetailsComponent implements OnInit {
   @Input() customer: Customer;
 
@@ -19,7 +20,6 @@ export class MovieDetailsComponent implements OnInit {
     private location: Location
   ) {}
 
-
   ngOnInit(): void {
     this.getDataFromRoute();
   }
@@ -27,7 +27,6 @@ export class MovieDetailsComponent implements OnInit {
   getDataFromRoute(){
     // take id from paramMap
     const id = +this.activatedRoute.snapshot.paramMap.get('id');
-
     // set value property movie
     this.movieServiceService.getDataFromId(id).subscribe(item => this.customer = item);
   }
@@ -39,4 +38,5 @@ export class MovieDetailsComponent implements OnInit {
   goback(): void{
     this.location.back();
   }
+  
 }

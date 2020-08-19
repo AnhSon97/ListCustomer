@@ -21,6 +21,7 @@
             </tr>
           </thead>
           <tbody id="myTable">
+
             <tr *ngFor="let i of listcustomer">
               <td>{{i.id}}</td>
               <td>{{i.FullName}}</td>
@@ -31,11 +32,12 @@
               <td>{{i.Position}}</td>
               <td><button type="button" (click)="delete(i.id)" class="btn btn-danger">Delete</button></td>
               <td><a routerLink="/ditails/{{i.id}}"><button type="button" class="btn btn-info">Info</button></a></td>
-              <td></td>
             </tr>
+
           </tbody>
 
         </table>
+
       </div>
     </div>
     <div>
