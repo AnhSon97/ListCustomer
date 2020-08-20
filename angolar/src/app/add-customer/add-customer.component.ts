@@ -11,21 +11,19 @@ import { from } from 'rxjs';
 })
 export class AddCustomerComponent implements OnInit {
 
-  constructor(private movieServiceService: MovieServiceService,
-              private moviesComponent: MoviesComponent) { }
+  constructor(private movieServiceService: MovieServiceService,private moviesComponent: MoviesComponent) {}
+  newCustomer = new Customer;
+  submited = false;
 
   ngOnInit(): void {
   }
 
-  add(FullName: string, Gender: string, Address: string, Department: string, Salary: string, Position: string): void {
-    const newCustomer: Customer = new Customer();
-    newCustomer.FullName = FullName;
-    newCustomer.Gender = Gender;
-    newCustomer.Address = Address;
-    newCustomer.Department = Department;
-    newCustomer.Salary = Salary;
-    newCustomer.Position = Position;
-
-    this.movieServiceService.addData(newCustomer).subscribe(insertedCustomer => this.moviesComponent.listcustomer.push(insertedCustomer))
+  onsubmit(){
+    this.submited = true;
   }
+
+  add() {
+    this.movieServiceService.addData(this.newCustomer).subscribe(insertedCustomer => this.moviesComponent.listcustomer.push(insertedCustomer))
+  }
+
 }

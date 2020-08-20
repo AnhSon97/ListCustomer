@@ -1,0 +1,15 @@
+.ng-valid[required], .ng-valid.required {
+  border: 2px solid forestgreen;
+}
+
+.ng-invalid:not(form){
+  border: 2px solid red;
+}
+
+h3{
+  text-align: center;
+}
+
+.alert-danger{
+  margin-top: 20px;
+}

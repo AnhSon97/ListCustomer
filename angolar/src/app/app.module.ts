@@ -22,6 +22,7 @@ import { from } from 'rxjs';
     FooterComponent,
     NavbarComponent,
     AddCustomerComponent
+
   ],
   imports: [
     FormsModule,

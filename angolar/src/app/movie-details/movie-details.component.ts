@@ -12,7 +12,7 @@ import { MovieServiceService } from '../movie-service.service';
 })
 
 export class MovieDetailsComponent implements OnInit {
-  @Input() customer: Customer;
+  customer: Customer;
 
   constructor(
     private activatedRoute:ActivatedRoute,
@@ -38,5 +38,5 @@ export class MovieDetailsComponent implements OnInit {
   goback(): void{
     this.location.back();
   }
-  
+
 }
