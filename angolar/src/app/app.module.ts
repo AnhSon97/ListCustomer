@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { from } from 'rxjs';
+import { LoginComponent } from './login/login.component';
+import {AuthGuard} from './auth.guard'
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { from } from 'rxjs';
     Top4MoviesComponent,
     FooterComponent,
     NavbarComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    LoginComponent
 
   ],
   imports: [
@@ -33,7 +36,8 @@ import { from } from 'rxjs';
   providers: [
     MovieServiceService,
     MoviesComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

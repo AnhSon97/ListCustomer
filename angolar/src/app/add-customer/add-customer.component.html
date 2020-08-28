@@ -1,22 +1,23 @@
 <h2 style="text-align: center;">Add Customer</h2>
-<div class="container" [hidden] = "submited">
-  <form (ngSubmit) = "onsubmit()" #AddCustomerForm= "ngForm">
+<div class="container" [hidden]="submited">
+  <form (ngSubmit)="onsubmit()" #AddCustomerForm="ngForm">
 
     <div class="form-group">
       <label for="fullName">New's FullName:</label>
-      <input type="fullName" [(ngModel)]="newCustomer.FullName" class="form-control" placeholder="Enter fullName" id = "fullName" name="fullName"
-      #fullName="ngModel" required>
+      <input type="fullName" [(ngModel)]="newCustomer.FullName" class="form-control" placeholder="Enter fullName"
+        id="fullName" name="fullName" #fullName="ngModel" required>
 
-      <div [hidden]= "fullName.valid || fullName.pristine" class="alert alert-danger">
+      <div [hidden]="fullName.valid || fullName.pristine" class="alert alert-danger">
         <p style="text-align: center;">Name is required(Must not blank)</p>
       </div>
     </div>
 
     <div class="form-group">
       <label for="gender">Gender:</label>
-      <input id="gender" class="form-control" placeholder="Enter gender" name="gender" [(ngModel)]="newCustomer.Gender" #gender="ngModel" required >
+      <input id="gender" class="form-control" placeholder="Enter gender" name="gender" [(ngModel)]="newCustomer.Gender"
+        #gender="ngModel" required>
 
-      <div [hidden]= "gender.valid || gender.pristine" class="alert alert-danger">
+      <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
         <p style="text-align: center;">Name is required(Must not blank)</p>
       </div>
     </div>
@@ -25,36 +26,40 @@
 
     <div class="form-group">
       <label for="address">Address:</label>
-      <input id="address" [(ngModel)]="newCustomer.Address" class="form-control" placeholder="Enter address" name="address" #address="ngModel" required >
+      <input id="address" [(ngModel)]="newCustomer.Address" class="form-control" placeholder="Enter address"
+        name="address" #address="ngModel" required>
 
-      <div [hidden]= "address.valid || address.pristine" class="alert alert-danger">
+      <div [hidden]="address.valid || address.pristine" class="alert alert-danger">
         <p style="text-align: center;">Name is required(Must not blank)</p>
       </div>
     </div>
 
     <div class="form-group">
       <label for="department">Department:</label>
-      <input id="department" [(ngModel)]="newCustomer.Department" class="form-control" placeholder="Enter department" name="department" #department="ngModel" required >
+      <input id="department" [(ngModel)]="newCustomer.Department" class="form-control" placeholder="Enter department"
+        name="department" #department="ngModel" required>
 
-      <div [hidden]= "department.valid || department.pristine" class="alert alert-danger">
+      <div [hidden]="department.valid || department.pristine" class="alert alert-danger">
         <p style="text-align: center;">Name is required(Must not blank)</p>
       </div>
     </div>
 
     <div class="form-group">
       <label for="salary">Salary:</label>
-      <input id="salary" [(ngModel)]="newCustomer.Salary" class="form-control" placeholder="Enter salary" name="salary" #salary="ngModel" required  >
+      <input id="salary" [(ngModel)]="newCustomer.Salary" class="form-control" placeholder="Enter salary" name="salary"
+        #salary="ngModel" required>
 
-      <div [hidden]= "salary.valid || salary.pristine" class="alert alert-danger">
+      <div [hidden]="salary.valid || salary.pristine" class="alert alert-danger">
         <p style="text-align: center;">Name is required(Must not blank)</p>
       </div>
     </div>
 
     <div class="form-group">
       <label for="position">Position:</label>
-      <input id="position" [(ngModel)]="newCustomer.Position" class="form-control" placeholder="Enter gender" name="position" required #position="ngModel" >
+      <input id="position" [(ngModel)]="newCustomer.Position" class="form-control" placeholder="Enter gender"
+        name="position" required #position="ngModel">
 
-      <div [hidden]= "position.valid || position.pristine" class="alert alert-danger">
+      <div [hidden]="position.valid || position.pristine" class="alert alert-danger">
         <p style="text-align: center;">Name is required(Must not blank)</p>
       </div>
     </div>
@@ -65,4 +70,4 @@
   </form>
 </div>
 
-<h1 style="text-align: center; color: green;" [hidden] = "!submited">SUBMIT DONE!</h1>
+<h1 style="text-align: center; color: green;" [hidden]="!submited">SUBMIT DONE!</h1>

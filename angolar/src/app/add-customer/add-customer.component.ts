@@ -11,14 +11,14 @@ import { from } from 'rxjs';
 })
 export class AddCustomerComponent implements OnInit {
 
-  constructor(private movieServiceService: MovieServiceService,private moviesComponent: MoviesComponent) {}
+  constructor(private movieServiceService: MovieServiceService, private moviesComponent: MoviesComponent) { }
   newCustomer = new Customer;
   submited = false;
 
   ngOnInit(): void {
   }
 
-  onsubmit(){
+  onsubmit() {
     this.submited = true;
   }
 
